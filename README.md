@@ -1,14 +1,32 @@
-# PyCalc
+num1 = input("choose your first number ")
+op = str(input("choose 'd' for divide or 'm' for multiply or 'p' for plus or 's' for subtract"))
+num2 = input("choose your second number ")
 
-Your objective for this homework is to create a program in python that will act as a calculator. Your calculator should be able to handle two values input by the user, and then either add, subtract, multiply, or divide depending upon user choice.
+eq = num1 + op + num2
 
-This is an individual assignment. You can consult with others for specific help, but not for help with your code as a whole. If you have having major issues, come see me.
+print("This is the equation you have come up with " + str(eq))
 
-After you accept this assignment, you can upload your code to the repository created and then commit the changes.
+a = float(num1) + float(num2)
+b = float(num1) / float(num2)
+c = float(num1) * float(num2)
+d = float(num1) - float(num2)
 
-## Considerations
 
-- You should be thinking about code readability and efficiency during this assignment
-- See if you can deal with unknown or unexpected inputs
-- See if you can make your program deal with non-integers appropriately
+if op in ["d"]:
+    print("Since you chose the operation /, your answer is ")
+    print(b)
 
+
+if op in ["m"]:
+    print("Since you chose the operation *, your answer is ")
+    print(c)
+
+
+if op in ["p"]:
+    print("Since you chose the operation +, your answer is ")
+    print(a)
+
+
+if op in ["s"]:
+    print("Since you chose the operation -, your answer is ")
+    print(d)
